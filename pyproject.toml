@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "repo-convention-fingerprinter"
+version = "0.1.0"
+description = "Scans repository manifests, test runners, and directory trees to generate machine-readable AGENTS.md convention profiles"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+    {name = "Ejaj Mahmud", email = "dev@ejajmahmud.com"}
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+dependencies = []
+
+[project.scripts]
+repo-convention-fingerprinter = "repo_convention_fingerprinter.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["repo_convention_fingerprinter*"]
